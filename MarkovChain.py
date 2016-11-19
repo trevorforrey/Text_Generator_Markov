@@ -1,6 +1,5 @@
 import random
 
-#base_text = "But Obama also emphasized that Trump's brand of populism is not a uniquely American phenomenon. And he said technology like social media was helping to create 'a volatile politics' by exposing differences within and between countries. 'In our globalized world, with the migration of people and the rapid movement of ideas and cultures and traditions, we see increasingly this blend of forces mixing together in ways that often enrich our societies but also cause tensions,' he said. 'Faced with this new reality where cultures clash, it's inevitable that some will seek a comfort in nationalism or tribe or ethnicity or sect.'And that, in turn, has created distrust between people and their governments, Obama said. 'There's a growing suspicion — or even disdain — for elites and institutions that seem remote from the daily lives of ordinary people. What an irony it is, at a time when we can reach out to people in the most remote corners of the planet, so many citizens feel disconnected from their own governments,' he said."
 file = open("TextFile.txt")
 base_text = ""
 for line in file:
