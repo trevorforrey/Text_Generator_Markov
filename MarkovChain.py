@@ -1,8 +1,12 @@
 import random
 
-base_text = "In the morning Frodo woke refreshed. He was lying in a bower made by a living tree with branches laced and drooping to the ground; his bed was of fern and grass, deep and soft and strangely fragrant. The sun was shining through the fluttering leaves, which were still green upon the tree. He jumped up and went out."
+#base_text = "But Obama also emphasized that Trump's brand of populism is not a uniquely American phenomenon. And he said technology like social media was helping to create 'a volatile politics' by exposing differences within and between countries. 'In our globalized world, with the migration of people and the rapid movement of ideas and cultures and traditions, we see increasingly this blend of forces mixing together in ways that often enrich our societies but also cause tensions,' he said. 'Faced with this new reality where cultures clash, it's inevitable that some will seek a comfort in nationalism or tribe or ethnicity or sect.'And that, in turn, has created distrust between people and their governments, Obama said. 'There's a growing suspicion — or even disdain — for elites and institutions that seem remote from the daily lives of ordinary people. What an irony it is, at a time when we can reach out to people in the most remote corners of the planet, so many citizens feel disconnected from their own governments,' he said."
+file = open("TextFile.txt")
+base_text = ""
+for line in file:
+    base_text += line
 
-prefix_num = 6
+prefix_num = 10
 prefixes = {}
 
 def generateText():
@@ -10,7 +14,7 @@ def generateText():
     currentGram = base_text[0:prefix_num]
     result = currentGram
 
-    for character in range(0,500):
+    for character in range(0,1000):
         #print("For generation: " + currentGram)
         try:
             possible_characters = prefixes[currentGram]
