@@ -10,7 +10,7 @@ base_text.replace('\n', ' ').replace('\r', '')
 prefix_num = 10
 prefixes = {}
 
-# Generates a set amount of randomly generated text
+# Function that generates a set amount of randomly generated text
 def generateText(amount_of_generated_text):
 
     # Grab the first "gram" of the text (based on prefix limit)
@@ -41,14 +41,11 @@ def generateText(amount_of_generated_text):
     print(result)
 
 
-
 # For every text "node" of text in the file
 for character in range(0,len(base_text) - prefix_num):
 
     # Grab the next "node" of text
     gram = base_text[character:character + prefix_num]
-
-    #print("For Creation: " + gram)
 
     # If the text node hasn't been seen before, create a collection for it
     if gram not in prefixes:
@@ -57,9 +54,5 @@ for character in range(0,len(base_text) - prefix_num):
     # Append the next node in the substring to the substring collection
     prefixes[gram].append(base_text[character + prefix_num])
 
-#    for key in prefixes:
-#        print(key)
-#        for value in key:
-#            print(value)
 
 generateText(1000)
